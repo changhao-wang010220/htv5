@@ -9,7 +9,7 @@ export default function Body() {
     return (
         <div>
             <div className="p-5"></div>
-           <Switch>
+            <Switch>
                 <Route path='/about' component={About}/>
                 <Route path='/market' component={Market}/>
                 <Route path='/community' component={Community}/>
