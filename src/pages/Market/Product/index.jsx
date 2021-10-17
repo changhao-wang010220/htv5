@@ -11,7 +11,7 @@ export default class Product extends Component {
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">{`$${price}`}</p>
                         <p className="card-text">{store}</p>
-                        <a href="#" className="btn btn-success col-12">Purchase</a>
+                        <a href="/" className="btn btn-success col-12">Purchase</a>
                     </div>
                 </div>
             </div>

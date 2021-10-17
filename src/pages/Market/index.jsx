@@ -30,11 +30,19 @@ export default class Market extends Component {
         const {isLoading, err, seedsList} = this.state;
         if(isLoading) {
             return (
-                <h1>Loading...</h1>
+                <div className="d-flex justify-content-center">
+                    <div className="spinner-border text-success" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
             ) 
         } else if(err) {
             return (
-                <h1 className="text-danger">Currently the site is down, please try again later! :(</h1>
+                <section className="p-5">
+                    <div className="container">
+                        <h1 className="text-danger">Currently the site is down, please try again later! :(</h1>
+                    </div>
+                </section>
             )
         } else {
             return (

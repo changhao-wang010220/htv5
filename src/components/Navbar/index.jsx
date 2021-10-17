@@ -3,14 +3,6 @@ import {NavLink} from 'react-router-dom'
 
 export default function Navbar() {
     const [show, setShow] = useState(false);
-
-    function getPostsFromServer() {
-        console.log('abc');
-    }
-
-    function getSeedsFromServer() {
-        //axios.
-    }
     return (
         <nav className="navbar navbar-expand-lg bg-success bg-gradient navbar-dark py-3 fixed-top">
             <div className="container">
@@ -36,6 +28,5 @@ export default function Navbar() {
                 </div>
             </div>
         </nav>
-        
     )
 }

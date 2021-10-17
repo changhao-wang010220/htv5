@@ -1,0 +1,11 @@
+.card-title :hover{
+    cursor: pointer;
+}
+
+.author {
+    color: green;
+}
+
+.author :active{
+    background-color: grey;
+}
