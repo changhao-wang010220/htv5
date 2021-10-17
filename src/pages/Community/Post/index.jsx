@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './index.css'
 
+
 export default class Post extends Component {
     getPost = (post) => {
         return () => {
@@ -9,12 +10,12 @@ export default class Post extends Component {
     }
 
     render() {
-        const {date, author, title, article, img, post} = this.props;
+        const {date, author, title, article, image, post} = this.props;
         return (
             <div className="card mb-3">
                 <div className="row g-0">
                     <div className="col-md-4" data-bs-target="#myModal" data-bs-toggle="modal" onClick={this.getPost(post)}>
-                        <img src={img} className="img-fluid rounded-start" alt="post pic"/>
+                        <img src={image} className="img-fluid rounded-start" alt="post pic"/>
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">

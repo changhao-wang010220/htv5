@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import Post from './Post'
 import Post_page from './Post_page'
 
@@ -6,17 +7,17 @@ export default class Community extends Component {
     state = {
         isLoading:true,
         postsList:[
-            {id:'0001', date:'Oct 10th', title:'Title 1', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Joe', img:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'},
-            {id:'0002', date:'Oct 12th', title:'Title 2', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Charlie', img:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'},
-            {id:'0003', date:'Oct 11th', title:'Title 3', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Alex', img:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'},
-            {id:'0004', date:'Oct 15th', title:'Title 4', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Bob', img:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'}
+            {id:'0001', date:'Oct 10th', title:'Title 1', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Joe', image:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'},
+            {id:'0002', date:'Oct 12th', title:'Title 2', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Charlie', image:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'},
+            {id:'0003', date:'Oct 11th', title:'Title 3', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Alex', image:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'},
+            {id:'0004', date:'Oct 15th', title:'Title 4', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Bob', image:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'}
         ],
         err:'',
         tempPost:null
     }
 
     componentDidMount() {
-        // axios.get('016e-102-109-74-175.ngrok.io/marketplace/seeds/').then(
+        // axios.get('http://35.159.22.46:8000/swagger/community/posts/').then(
         //     response => {
         //         this.setState({isLoading:false, postsList:response})
         //     },
