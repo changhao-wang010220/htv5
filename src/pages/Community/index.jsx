@@ -12,7 +12,7 @@ export default class Community extends Component {
             {id:'0004', date:'Oct 15th', title:'Title 4', article:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolores in enim neque eius.', author:'Bob', img:'https://images.dailyhive.com/20210216212643/Screen-Shot-2021-02-16-at-10-e1614017091763.jpg'}
         ],
         err:'',
-        tempPostId:null
+        tempPost:null
     }
 
     componentDidMount() {
@@ -28,6 +28,7 @@ export default class Community extends Component {
     }
 
     getTempPost = (post) => {
+        console.log(post)
         this.setState({tempPost:post})
     }
 
