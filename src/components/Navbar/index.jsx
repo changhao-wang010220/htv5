@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
 import {NavLink} from 'react-router-dom'
+import logo from '../../pic/logo.png'
 
 export default function Navbar() {
     const [show, setShow] = useState(false);
+    let logoStyle = {
+        height:50
+    }
     return (
         <nav className="navbar navbar-expand-lg bg-success bg-gradient navbar-dark py-3 fixed-top">
             <div className="container">
-                <NavLink to='/' className="navbar-brand">Logo</NavLink>
+                <NavLink to='/' className="navbar-brand">
+                    <img className='img-fluid' src={logo} style={logoStyle}></img>
+                    The Nature Hub
+                </NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" onClick={() => {setShow(!show)}}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
